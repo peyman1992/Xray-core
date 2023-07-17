@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/sagernet/wireguard-go/conn"
+	"github.com/peyman1992/wireguard-go/conn"
 	xnet "github.com/xtls/xray-core/common/net"
 	"github.com/xtls/xray-core/features/dns"
 	"github.com/xtls/xray-core/transport/internet"

@@ -10,12 +10,12 @@ require (
 	github.com/gorilla/websocket v1.5.0
 	github.com/miekg/dns v1.1.55
 	github.com/pelletier/go-toml v1.9.5
+	github.com/peyman1992/wireguard-go v1.0.1
 	github.com/pires/go-proxyproto v0.7.0
 	github.com/quic-go/quic-go v0.36.2
 	github.com/refraction-networking/utls v1.3.2
 	github.com/sagernet/sing v0.2.7
 	github.com/sagernet/sing-shadowsocks v0.2.2
-	github.com/sagernet/wireguard-go v0.0.0-20221116151939-c99467f53f2c
 	github.com/seiflotfy/cuckoofilter v0.0.0-20220411075957-e3b120b3f5fb
 	github.com/stretchr/testify v1.8.4
 	github.com/v2fly/ss-bloomring v0.0.0-20210312155135-28617310f63e

@@ -12,7 +12,7 @@ import (
 	"net/netip"
 	"os"
 
-	"github.com/sagernet/wireguard-go/tun"
+	"github.com/peyman1992/wireguard-go/tun"
 	"github.com/xtls/xray-core/features/dns"
 	"gvisor.dev/gvisor/pkg/bufferv2"
 	"gvisor.dev/gvisor/pkg/tcpip"

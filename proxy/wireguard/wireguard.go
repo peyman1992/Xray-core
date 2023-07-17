@@ -27,7 +27,7 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/sagernet/wireguard-go/device"
+	"github.com/peyman1992/wireguard-go/device"
 	"github.com/xtls/xray-core/common"
 	"github.com/xtls/xray-core/common/buf"
 	"github.com/xtls/xray-core/common/log"
