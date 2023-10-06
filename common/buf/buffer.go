@@ -3,7 +3,7 @@ package buf
 import (
 	"io"
 
-	"github.com/xtls/xray-core/common/bytespool"
+	// "github.com/xtls/xray-core/common/bytespool"
 	"github.com/xtls/xray-core/common/net"
 )
 
@@ -12,7 +12,7 @@ const (
 	Size = 8192
 )
 
-var pool = bytespool.GetPool(Size)
+// var pool = bytespool.GetPool(Size)
 
 // Buffer is a recyclable allocation of a byte array. Buffer.Release() recycles
 // the buffer into an internal buffer pool, in order to recreate a buffer more
@@ -27,13 +27,13 @@ type Buffer struct {
 
 // New creates a Buffer with 0 length and 8K capacity.
 func New() *Buffer {
-	buf := pool.Get().([]byte)
-	if cap(buf) >= Size {
-		buf = buf[:Size]
-	} else {
-		buf = make([]byte, Size)
-	}
+	// buf := pool.Get().([]byte)
+	// if cap(buf) >= Size {
+	// 	buf = buf[:Size]
+	// } else {
 
+	// }
+	buf := make([]byte, Size)
 	return &Buffer{
 		v: buf,
 	}
@@ -68,13 +68,13 @@ func FromBytes(b []byte) *Buffer {
 // StackNew creates a new Buffer object on stack.
 // This method is for buffers that is released in the same function.
 func StackNew() Buffer {
-	buf := pool.Get().([]byte)
-	if cap(buf) >= Size {
-		buf = buf[:Size]
-	} else {
-		buf = make([]byte, Size)
-	}
+	// buf := pool.Get().([]byte)
+	// if cap(buf) >= Size {
+	// 	buf = buf[:Size]
+	// } else {
 
+	// }
+	buf := make([]byte, Size)
 	return Buffer{
 		v: buf,
 	}
@@ -86,13 +86,13 @@ func (b *Buffer) Release() {
 		return
 	}
 
-	p := b.v
+	// p := b.v
 	b.v = nil
 	b.Clear()
 
-	if cap(p) == Size {
-		pool.Put(p)
-	}
+	// if cap(p) == Size {
+	// 	pool.Put(p)
+	// }
 	b.UDP = nil
 }
 
